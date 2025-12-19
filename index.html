@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora de IMC completa e acessível. Calcule seu Índice de Massa Corporal de forma precisa para crianças, adultos e idosos.">
+    <meta name="keywords" content="IMC, calculadora IMC, índice de massa corporal, saúde, peso ideal">
+    <title>Calculadora IMC - Início</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    
+    <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Navegação principal" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); transform: translateY(0); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home" aria-label="Calculadora de IMC - Ir para início" style="position: relative; color: #1a2980; font-weight: 800; font-size: 1.6rem;">
+                <i class="bi bi-calculator-fill me-2" aria-hidden="true"></i>
+                <span class="d-none d-sm-inline" style="position: relative; z-index: 1;">CALCULADORA DE&nbsp;</span>
+                <span style="background: linear-gradient(135deg, #1a2980, #26d0ce); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900;">IMC</span>
+                <div class="brand-blur" style="position: absolute; top: 50%; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(26,41,128,0.2), rgba(38,208,206,0.2)); filter: blur(20px); transform: translateY(-50%) scale(1.2); z-index: 0; opacity: 0; transition: opacity 0.3s ease;" aria-hidden="true"></div>
+            </a>
+            <button class="navbar-toggler d-lg-none d-flex align-items-center justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu de navegação" style="width: 45px; height: 45px; border: none; background: rgba(26,41,128,0.1); border-radius: 8px;">
+                <i class="bi bi-list" style="color: #1a2980; font-size: 1.8rem; transform: rotate(0deg); transition: transform 0.3s ease;" aria-hidden="true"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav" style="gap: 1.2rem;" role="menubar">
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="#home" role="menuitem" aria-label="Ir para seção Início" style="color: #1a2980; font-weight: 500; position: relative; padding: 0.7rem 1.2rem; overflow: hidden;">
+                            <span style="position: relative; z-index: 2;">Início</span>
+                            <div class="nav-indicator" style="height: 100%; width: 0; background: linear-gradient(135deg, rgba(26,41,128,0.1), rgba(38,208,206,0.1)); position: absolute; top: 0; left: 0; transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 8px;" aria-hidden="true"></div>
+                            <div class="nav-line" style="height: 2px; width: 0; background: linear-gradient(90deg, #1a2980, #26d0ce); position: absolute; bottom: 0; left: 0; transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);" aria-hidden="true"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="#entenda" role="menuitem" aria-label="Ir para seção Entenda o IMC" style="color: #1a2980; font-weight: 500; position: relative; padding: 0.7rem 1.2rem; overflow: hidden;">
+                            <span style="position: relative; z-index: 2;">Entenda o IMC</span>
+                            <div class="nav-indicator" style="height: 100%; width: 0; background: linear-gradient(135deg, rgba(26,41,128,0.1), rgba(38,208,206,0.1)); position: absolute; top: 0; left: 0; transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 8px;" aria-hidden="true"></div>
+                            <div class="nav-line" style="height: 2px; width: 0; background: linear-gradient(90deg, #1a2980, #26d0ce); position: absolute; bottom: 0; left: 0; transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);" aria-hidden="true"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="#informacoes" role="menuitem" aria-label="Ir para seção Informações" style="color: #1a2980; font-weight: 500; position: relative; padding: 0.7rem 1.2rem; overflow: hidden;">
+                            <span style="position: relative; z-index: 2;">Informações</span>
+                            <div class="nav-indicator" style="height: 100%; width: 0; background: linear-gradient(135deg, rgba(26,41,128,0.1), rgba(38,208,206,0.1)); position: absolute; top: 0; left: 0; transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 8px;" aria-hidden="true"></div>
+                            <div class="nav-line" style="height: 2px; width: 0; background: linear-gradient(90deg, #1a2980, #26d0ce); position: absolute; bottom: 0; left: 0; transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);" aria-hidden="true"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="#equipe" role="menuitem" aria-label="Ir para seção Equipe" style="color: #1a2980; font-weight: 500; position: relative; padding: 0.7rem 1.2rem; overflow: hidden;">
+                            <span style="position: relative; z-index: 2;">Equipe</span>
+                            <div class="nav-indicator" style="height: 100%; width: 0; background: linear-gradient(135deg, rgba(26,41,128,0.1), rgba(38,208,206,0.1)); position: absolute; top: 0; left: 0; transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 8px;" aria-hidden="true"></div>
+                            <div class="nav-line" style="height: 2px; width: 0; background: linear-gradient(90deg, #1a2980, #26d0ce); position: absolute; bottom: 0; left: 0; transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);" aria-hidden="true"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="./pages/age.html" class="nav-link nav-cta" role="menuitem" aria-label="Ir para página de cálculo do IMC" style="background: linear-gradient(135deg, #1a2980, #26d0ce); color: white; padding: 0.7rem 1.8rem; border-radius: 50px; font-weight: 500; transition: all 0.3s ease; position: relative; overflow: hidden;">
+                            <span style="position: relative; z-index: 2;">Calcular IMC</span>
+                            <div class="cta-effect" style="position: absolute; top: 50%; left: 50%; width: 0; height: 0; background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%); transform: translate(-50%, -50%); transition: width 0.6s ease, height 0.6s ease; border-radius: 50%;" aria-hidden="true"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="container d-flex align-items-center justify-content-center min-vh-100">
+                <div class="hero-content text-center">
+                    <h1 id="hero-title" class="hero-title display-1 fw-bold mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
+                        Descubra seu IMC
+                    </h1>
+                    <p class="hero-description lead fs-4 lh-base mb-4" style="opacity: 0.9;">
+                        Calcule seu Índice de Massa Corporal de forma precisa<br class="d-none d-md-block" aria-hidden="true">e entenda melhor sua saúde. Nossa calculadora oferece<br class="d-none d-md-block" aria-hidden="true">resultados personalizados para todas as idades.
+                    </p>
+                    <a href="./pages/age.html" class="btn btn-warning btn-lg rounded-pill d-inline-flex align-items-center gap-2 px-5 py-3 fw-bold" aria-label="Ir para a calculadora de IMC" style="background: #ffd700; color: #000; font-size: 1.2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: none;">
+                        <span aria-hidden="true">Calcular agora</span>
+                        <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <a href="#entenda" class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x mb-4" aria-label="Rolar para a próxima seção" style="z-index: 3; cursor: pointer; text-decoration: none;">
+                <i class="bi bi-chevron-down fs-1" style="animation: bounce 2s infinite; color: white;" aria-hidden="true"></i>
+                <span class="visually-hidden">Rolar para baixo</span>
+            </a>
+        </section>
+
+        <section id="entenda" class="imc-section" aria-labelledby="entenda-title" style="margin-top: -100px; background: white; border-radius: 50px 50px 0 0; position: relative; z-index: 10; box-shadow: 0 -20px 50px rgba(0,0,0,0.1);">
+            <div class="container pt-5">
+                <div class="text-center mb-5">
+                    <h2 id="entenda-title" class="section-title">Entenda o IMC</h2>
+                    <p class="text-muted fs-5 mx-auto" style="max-width: 600px;">
+                        Descubra em qual faixa você se encontra e entenda melhor os resultados do seu IMC
+                    </p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="imc-card shadow-lg">
+                            <div class="table-responsive">
+                                <table class="imc-table table table-borderless align-middle" aria-label="Tabela de classificação do IMC">
+                                    <caption class="visually-hidden">Classificação do Índice de Massa Corporal com faixas e descrições</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="text-center">Faixa de IMC</th>
+                                            <th scope="col" class="text-center">Classificação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="imc-range-1">
+                                            <td class="text-center">Menor que 18,5 <span class="range-label badge" aria-label="Risco: Baixo">Baixo</span></td>
+                                            <td class="text-center">Abaixo do peso</td>
+                                        </tr>
+                                        <tr class="imc-range-2">
+                                            <td class="text-center">18,5 a 24,9 <span class="range-label badge" aria-label="Risco: Ideal">Ideal</span></td>
+                                            <td class="text-center">Peso normal</td>
+                                        </tr>
+                                        <tr class="imc-range-3">
+                                            <td class="text-center">25,0 a 29,9 <span class="range-label badge" aria-label="Risco: Elevado">Elevado</span></td>
+                                            <td class="text-center">Sobrepeso</td>
+                                        </tr>
+                                        <tr class="imc-range-4">
+                                            <td class="text-center">30,0 a 34,9 <span class="range-label badge" aria-label="Risco: Alto">Alto</span></td>
+                                            <td class="text-center">Obesidade grau 1</td>
+                                        </tr>
+                                        <tr class="imc-range-5">
+                                            <td class="text-center">35,0 a 39,9 <span class="range-label badge" aria-label="Risco: Muito Alto">Muito Alto</span></td>
+                                            <td class="text-center">Obesidade grau 2</td>
+                                        </tr>
+                                        <tr class="imc-range-6">
+                                            <td class="text-center">Maior que 40,0 <span class="range-label badge" aria-label="Risco: Extremo">Extremo</span></td>
+                                            <td class="text-center">Obesidade grau 3</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                                <div id="informacoes" class="row mt-5 justify-content-center">
+                    <div class="col-12 text-center mb-5">
+                        <h3 id="informacoes-title" class="fw-bold mb-3" style="color: #1a2980; font-size: 2.2rem;">Informações Importantes</h3>
+                        <div style="width: 80px; height: 4px; background: linear-gradient(90deg, #1a2980, #26d0ce); margin: 0 auto; border-radius: 2px;" aria-hidden="true"></div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <article class="info-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden" style="transition: all 0.3s ease;" aria-labelledby="info-prevencao">
+                            <div class="card-header text-white text-center p-4 border-0" style="background: linear-gradient(135deg, #1a2980, #26d0ce);">
+                                <i class="bi bi-shield-check fs-1 mb-2" aria-hidden="true"></i>
+                                <h4 id="info-prevencao" class="mb-0 fw-semibold">Prevenção</h4>
+                            </div>
+                            <div class="card-body text-center p-4">
+                                <p class="card-text text-secondary lh-lg mb-0 fs-6">O monitoramento regular do IMC ajuda na prevenção de doenças cardiovasculares, diabetes e outros problemas de saúde relacionados ao peso.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <article class="info-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden" style="transition: all 0.3s ease;" aria-labelledby="info-limitacoes">
+                            <div class="card-header text-white text-center p-4 border-0" style="background: linear-gradient(135deg, #1a2980, #26d0ce);">
+                                <i class="bi bi-exclamation-circle fs-1 mb-2" aria-hidden="true"></i>
+                                <h4 id="info-limitacoes" class="mb-0 fw-semibold">Limitações</h4>
+                            </div>
+                            <div class="card-body text-center p-4">
+                                <p class="card-text text-secondary lh-lg mb-0 fs-6">O IMC é um indicador geral e pode não ser preciso para atletas, idosos ou gestantes. É importante consultar um profissional de saúde.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <article class="info-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden" style="transition: all 0.3s ease;" aria-labelledby="info-saude">
+                            <div class="card-header text-white text-center p-4 border-0" style="background: linear-gradient(135deg, #1a2980, #26d0ce);">
+                                <i class="bi bi-heart-pulse fs-1 mb-2" aria-hidden="true"></i>
+                                <h4 id="info-saude" class="mb-0 fw-semibold">Saúde em Foco</h4>
+                            </div>
+                            <div class="card-body text-center p-4">
+                                <p class="card-text text-secondary lh-lg mb-0 fs-6">Mantenha seu IMC dentro da faixa saudável para reduzir riscos à saúde e melhorar sua qualidade de vida geral.</p>
+                            </div>
+                        </article>
+                    </div>                    <div class="col-lg-4 col-md-6 mb-4">
+                        <article class="info-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden" style="transition: all 0.3s ease;" aria-labelledby="info-idade">
+                            <div class="card-header text-white text-center p-4 border-0" style="background: linear-gradient(135deg, #1a2980, #26d0ce);">
+                                <i class="bi bi-people fs-1 mb-2" aria-hidden="true"></i>
+                                <h4 id="info-idade" class="mb-0 fw-semibold">IMC por Idade</h4>
+                            </div>
+                            <div class="card-body text-center p-4">
+                                <p class="card-text text-secondary lh-lg mb-0 fs-6">Os valores ideais variam conforme a idade. Crianças, adultos e idosos têm diferentes faixas de referência para um peso saudável.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <article class="info-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden" style="transition: all 0.3s ease;" aria-labelledby="info-frequencia">
+                            <div class="card-header text-white text-center p-4 border-0" style="background: linear-gradient(135deg, #1a2980, #26d0ce);">
+                                <i class="bi bi-calendar-check fs-1 mb-2" aria-hidden="true"></i>
+                                <h4 id="info-frequencia" class="mb-0 fw-semibold">Frequência</h4>
+                            </div>
+                            <div class="card-body text-center p-4">
+                                <p class="card-text text-secondary lh-lg mb-0 fs-6">Recomenda-se calcular o IMC a cada 3-6 meses, ou conforme orientação médica, para acompanhar mudanças no peso.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <article class="info-card card h-100 border-0 shadow-sm rounded-4 overflow-hidden" style="transition: all 0.3s ease;" aria-labelledby="info-medidas">
+                            <div class="card-header text-white text-center p-4 border-0" style="background: linear-gradient(135deg, #1a2980, #26d0ce);">
+                                <i class="bi bi-rulers fs-1 mb-2" aria-hidden="true"></i>
+                                <h4 id="info-medidas" class="mb-0 fw-semibold">Outras Medidas</h4>
+                            </div>
+                            <div class="card-body text-center p-4">
+                                <p class="card-text text-secondary lh-lg mb-0 fs-6">Além do IMC, medidas como circunferência abdominal e percentual de gordura corporal complementam a avaliação.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+        <section id="equipe" class="team-section py-5" aria-labelledby="equipe-title" style="background: linear-gradient(180deg, #f0f4ff 0%, #ffffff 100%);">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 id="equipe-title" class="fw-bold mb-3" style="color: #1a2980; font-size: 2.2rem;">Nossa Equipe</h2>
+                    <div class="mx-auto rounded" style="width: 80px; height: 4px; background: linear-gradient(90deg, #1a2980, #26d0ce);" aria-hidden="true"></div>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <article class="team-card card border-0 rounded-4 overflow-hidden shadow-sm" style="transition: all 0.3s ease;" aria-labelledby="member-1-name">
+                            <div class="position-relative" style="height: 120px; background: linear-gradient(135deg, #1a2980, #26d0ce);">
+                                <div class="position-absolute bottom-0 start-50 translate-middle-x bg-light rounded-circle border border-5 border-white shadow overflow-hidden" style="width: 100px; height: 100px;">
+                                    <img src="./assets/ali.jpg" alt="" class="w-100 h-100 object-fit-cover" aria-hidden="true">
+                                </div>
+                            </div>
+                            <div class="card-body text-center pt-5 pb-4">
+                                <h5 id="member-1-name" class="card-title fw-semibold mb-1" style="color: #1a2980;">Ali Ihsen Khatib</h5>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <article class="team-card card border-0 rounded-4 overflow-hidden shadow-sm" style="transition: all 0.3s ease;" aria-labelledby="member-2-name">
+                            <div class="position-relative" style="height: 120px; background: linear-gradient(135deg, #1a2980, #26d0ce);">
+                                <div class="position-absolute bottom-0 start-50 translate-middle-x bg-light rounded-circle border border-5 border-white shadow overflow-hidden" style="width: 100px; height: 100px;">
+                                    <img src="./assets/gui.jpg" alt="" class="w-100 h-100 object-fit-cover" aria-hidden="true">
+                                </div>
+                            </div>
+                            <div class="card-body text-center pt-5 pb-4">
+                                <h5 id="member-2-name" class="card-title fw-semibold mb-1" style="color: #1a2980;">Guilherme Araujo Sales</h5>
+                            </div>
+                        </article>
+                    </div>
+                    
+                  
+                    <div class="col-lg-4 col-md-6">
+                        <article class="team-card card border-0 rounded-4 overflow-hidden shadow-sm" style="transition: all 0.3s ease;" aria-labelledby="member-3-name">
+                            <div class="position-relative" style="height: 120px; background: linear-gradient(135deg, #1a2980, #26d0ce);">
+                                <div class="position-absolute bottom-0 start-50 translate-middle-x bg-light rounded-circle border border-5 border-white shadow overflow-hidden" style="width: 100px; height: 100px;">
+                                    <img src="./assets/jamily.jpeg" alt="Jamilly Vertuoza de Araujo" width="100" height="100" loading="lazy" decoding="async" class="w-100 h-100 rounded-circle" style="object-fit: cover; display: block;">
+                                </div>
+                            </div>
+                            <div class="card-body text-center pt-5 pb-4">
+                                <h5 id="member-3-name" class="card-title fw-semibold mb-1" style="color: #1a2980;">Jamilly Vertuoza de Araujo</h5>
+                            </div>
+                        </article>
+                    </div>
+                    
+                   
+                    <div class="col-lg-4 col-md-6">
+                        <article class="team-card card border-0 rounded-4 overflow-hidden shadow-sm" style="transition: all 0.3s ease;" aria-labelledby="member-4-name">
+                            <div class="position-relative" style="height: 120px; background: linear-gradient(135deg, #1a2980, #26d0ce);">
+                                <div class="position-absolute bottom-0 start-50 translate-middle-x bg-light rounded-circle border border-5 border-white shadow overflow-hidden" style="width: 100px; height: 100px;">
+                                    <img src="./assets/rafael.jpeg" alt="" class="w-100 h-100 object-fit-cover" aria-hidden="true">
+                                </div>
+                            </div>
+                            <div class="card-body text-center pt-5 pb-4">
+                                <h5 id="member-4-name" class="card-title fw-semibold mb-1" style="color: #1a2980;">Rafael Guimarães Silva</h5>
+                            </div>
+                        </article>
+                    </div>
+                    
+                   
+                    <div class="col-lg-4 col-md-6">
+                        <article class="team-card card border-0 rounded-4 overflow-hidden shadow-sm" style="transition: all 0.3s ease;" aria-labelledby="member-5-name">
+                            <div class="position-relative" style="height: 120px; background: linear-gradient(135deg, #1a2980, #26d0ce);">
+                                <div class="position-absolute bottom-0 start-50 translate-middle-x bg-light rounded-circle border border-5 border-white shadow overflow-hidden" style="width: 100px; height: 100px;">
+                                    <img src="./assets/rayda.jpeg" alt="" class="w-100 h-100 object-fit-cover" aria-hidden="true">
+                                </div>
+                            </div>
+                            <div class="card-body text-center pt-5 pb-4">
+                                <h5 id="member-5-name" class="card-title fw-semibold mb-1" style="color: #1a2980;">Rayda Omar Anka</h5>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <article class="team-card card border-0 rounded-4 overflow-hidden shadow-sm" style="transition: all 0.3s ease;" aria-labelledby="member-6-name">
+                            <div class="position-relative" style="height: 120px; background: linear-gradient(135deg, #1a2980, #26d0ce);">
+                                <div class="position-absolute bottom-0 start-50 translate-middle-x bg-light rounded-circle border border-5 border-white shadow overflow-hidden" style="width: 100px; height: 100px;">
+                                    <img src="./assets/rolt.jpeg" alt="" class="w-100 h-100 object-fit-cover" aria-hidden="true">
+                                </div>
+                            </div>
+                            <div class="card-body text-center pt-5 pb-4">
+                                <h5 id="member-6-name" class="card-title fw-semibold mb-1" style="color: #1a2980;">Vinicius Conceição Rolt</h5>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        
+        let lastScrollTop = 0;
+        let scrollTimer;
+        
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            
+            if (currentScroll > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            
+            if (currentScroll > lastScrollTop && currentScroll > 100) {
+             
+                navbar.classList.add('nav-hidden');
+            } else {
+                
+                navbar.classList.remove('nav-hidden');
+            }
+            
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            
+            
+            clearTimeout(scrollTimer);
+            scrollTimer = setTimeout(() => {
+                navbar.classList.remove('nav-hidden');
+            }, 1500);
+        });
+
+      
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', function() {
+            const scrollY = window.pageYOffset;
+            
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 100;
+                const sectionId = section.getAttribute('id');
+                const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+                
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    navLink?.classList.add('active');
+                } else {
+                    navLink?.classList.remove('active');
+                }
+            });
+        });
+
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

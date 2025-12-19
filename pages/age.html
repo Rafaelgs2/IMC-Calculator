@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora de IMC para crianças, adultos e idosos. Escolha sua categoria para calcular seu índice de massa corporal.">
+    <title>Calculadora IMC - Escolha sua Categoria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/age.css">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    
+    <a href="../index.html" class="btn-voltar-fixo" aria-label="Voltar para página inicial">
+        <i class="bi bi-arrow-left"></i>
+        <span>Voltar</span>
+    </a>
+
+    <main id="main-content">
+        <h1 class="visually-hidden">Calculadora de IMC - Selecione sua Categoria</h1>
+        
+        <div class="container-fluid h-100 p-0" role="navigation" aria-label="Seleção de categoria por faixa etária">
+            <div class="row h-100 g-0">
+               
+                <div class="col-md-4 categoria-col crianca-col">
+                    <a href="criancas.html" 
+                       class="categoria-link" 
+                       tabindex="0"
+                       role="button"
+                       aria-label="Calculadora de IMC para crianças de 0 a 12 anos">
+                        <div class="categoria-content">
+                            <i class="mb-2" aria-hidden="true"></i>
+                            <h2>Criança</h2>
+                            <p>0 a 12 anos</p>
+                            <img src="../assets/kids.png" alt="Ilustração representando categoria infantil" role="img">
+                        </div>
+                    </a>
+                </div>
+
+            
+                <div class="col-md-4 categoria-col adulto-col">
+                    <a href="adultos.html" 
+                       class="categoria-link" 
+                       tabindex="0"
+                       role="button"
+                       aria-label="Calculadora de IMC para adultos de 13 a 59 anos">
+                        <div class="categoria-content">
+                            <i class="mb-2" aria-hidden="true"></i>
+                            <h2>Adulto</h2>
+                            <p>13 a 59 anos</p>
+                            <img src="../assets/adulto.png" alt="Ilustração representando categoria adulta" role="img">
+                        </div>
+                    </a>
+                </div>
+
+               
+                <div class="col-md-4 categoria-col idoso-col">
+                    <a href="idosos.html" 
+                       class="categoria-link" 
+                       tabindex="0"
+                       role="button"
+                       aria-label="Calculadora de IMC para idosos com 60 anos ou mais">
+                        <div class="categoria-content">
+                            <i class="mb-2" aria-hidden="true"></i>
+                            <h2>Idoso</h2>
+                            <p>60+ anos</p>
+                            <img src="../assets/velho.png" alt="Ilustração representando categoria idosa" role="img">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

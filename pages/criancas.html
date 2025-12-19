@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora de IMC para crianças de 0 a 12 anos">
+    <title>Calculadora IMC - Criança</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/crianca.css">
+</head>
+<body class="crianca-body">
+    
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+ 
+    <a href="age.html" class="btn-voltar-fixo" aria-label="Voltar para página inicial">
+        <i class="bi bi-arrow-left"></i>
+        <span>Voltar</span>
+    </a>
+
+    <header class="crianca-header py-4">
+        <div class="container position-relative">
+            <h1 class="mb-0 text-white text-center">
+                <i class="bi bi-calculator-fill me-2" aria-hidden="true"></i>
+                Calculadora IMC Infantil
+            </h1>
+        </div>
+    </header>
+
+    
+    <main id="main-content" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    
+                    <div class="card shadow-lg border-0 crianca-card">
+                        <div class="card-body p-4 p-md-5">
+                            
+                            <div class="info-box crianca-info mb-4" role="complementary" aria-label="Informações sobre IMC infantil">
+                                <div class="d-flex align-items-start">
+                                    <i class="bi bi-info-circle-fill fs-3 me-3 text-warning" aria-hidden="true"></i>
+                                    <div>
+                                        <h2 class="h5 mb-2">Para Crianças de 0 a 12 anos</h2>
+                                        <p class="mb-0 small">
+                                            O cálculo do IMC infantil considera idade, peso e altura. 
+                                            Os valores de referência são diferentes dos adultos.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        
+                            <form id="formCrianca" novalidate aria-labelledby="form-title">
+                                <h3 id="form-title" class="h4 mb-4 crianca-title">
+                                    <i class="bi bi-person-badge me-2" aria-hidden="true"></i>
+                                    Dados da Criança
+                                </h3>
+
+                          
+                                <div class="form-floating mb-3">
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        id="nome" 
+                                        name="nome"
+                                        placeholder="Nome completo"
+                                        required
+                                        aria-required="true"
+                                        aria-describedby="nome-help">
+                                    <label for="nome">
+                                        <i class="bi bi-person me-2" aria-hidden="true"></i>
+                                        Nome da Criança *
+                                    </label>
+                                    <div class="invalid-feedback" role="alert">
+                                        Por favor, insira o nome da criança.
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    
+                                    <div class="col-md-4 mb-3">
+                                        <div class="form-floating">
+                                            <input 
+                                                type="number" 
+                                                class="form-control" 
+                                                id="idade" 
+                                                name="idade"
+                                                placeholder="Idade"
+                                                min="0" 
+                                                max="12" 
+                                                step="1"
+                                                required
+                                                aria-required="true"
+                                                aria-describedby="idade-help"
+                                                style="-webkit-appearance: none; -moz-appearance: textfield; appearance: textfield;">
+                                            <label for="idade">
+                                                <i class="bi bi-calendar3 me-2" aria-hidden="true"></i>
+                                                Idade (anos) *
+                                            </label>
+                                            <div class="invalid-feedback" role="alert">
+                                                Idade deve ser entre 0 e 12 anos.
+                                            </div>
+                                        </div>
+                                        <small id="idade-help" class="form-text text-muted">De 0 a 12 anos</small>
+                                    </div>
+
+                                 
+                                    <div class="col-md-4 mb-3">
+                                        <div class="form-floating">
+                                            <input 
+                                                type="number" 
+                                                class="form-control" 
+                                                id="peso" 
+                                                name="peso"
+                                                placeholder="Peso"
+                                                min="1" 
+                                                max="200" 
+                                                step="0.1"
+                                                required
+                                                aria-required="true"
+                                                aria-describedby="peso-help"
+                                                style="-webkit-appearance: none; -moz-appearance: textfield; appearance: textfield;">
+                                            <label for="peso">
+                                                <i class="bi bi-speedometer me-2" aria-hidden="true"></i>
+                                                Peso (kg) *
+                                            </label>
+                                            <div class="invalid-feedback" role="alert">
+                                                Por favor, insira um peso válido.
+                                            </div>
+                                        </div>
+                                        <small id="peso-help" class="form-text text-muted">Em quilogramas</small>
+                                    </div>
+
+                                   
+                                    <div class="col-md-4 mb-3">
+                                        <div class="form-floating">
+                                            <input 
+                                                type="number" 
+                                                class="form-control" 
+                                                id="altura" 
+                                                name="altura"
+                                                placeholder="Altura"
+                                                min="40" 
+                                                max="200" 
+                                                step="0.1"
+                                                required
+                                                aria-required="true"
+                                                aria-describedby="altura-help"
+                                                style="-webkit-appearance: none; -moz-appearance: textfield; appearance: textfield;">
+                                            <label for="altura">
+                                                <i class="bi bi-rulers me-2" aria-hidden="true"></i>
+                                                Altura (cm) *
+                                            </label>
+                                            <div class="invalid-feedback" role="alert">
+                                                Por favor, insira uma altura válida.
+                                            </div>
+                                        </div>
+                                        <small id="altura-help" class="form-text text-muted">Em centímetros</small>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold">
+                                        <i class="bi bi-gender-ambiguous me-2" aria-hidden="true"></i>
+                                        Sexo *
+                                    </label>
+                                    <div class="row g-3">
+                                        <div class="col-6">
+                                            <input 
+                                                type="radio" 
+                                                class="btn-check" 
+                                                name="sexo" 
+                                                id="masculino" 
+                                                value="masculino"
+                                                required
+                                                aria-required="true">
+                                            <label class="btn btn-outline-primary w-100" for="masculino">
+                                                <i class="bi bi-gender-male me-2" aria-hidden="true"></i>
+                                                Masculino
+                                            </label>
+                                        </div>
+                                        <div class="col-6">
+                                            <input 
+                                                type="radio" 
+                                                class="btn-check" 
+                                                name="sexo" 
+                                                id="feminino" 
+                                                value="feminino"
+                                                required
+                                                aria-required="true">
+                                            <label class="btn btn-outline-primary w-100" for="feminino">
+                                                <i class="bi bi-gender-female me-2" aria-hidden="true"></i>
+                                                Feminino
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="invalid-feedback d-block" role="alert" id="sexo-error" style="display: none !important;">
+                                        Por favor, selecione o sexo.
+                                    </div>
+                                </div>
+
+                             
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button 
+                                        type="reset" 
+                                        class="btn btn-outline-secondary btn-lg"
+                                        aria-label="Limpar formulário">
+                                        <i class="bi bi-arrow-counterclockwise me-2" aria-hidden="true"></i>
+                                        Limpar
+                                    </button>
+                                    <button 
+                                        type="submit" 
+                                        class="btn btn-crianca btn-lg"
+                                        aria-label="Calcular IMC">
+                                        <i class="bi bi-calculator me-2" aria-hidden="true"></i>
+                                        Calcular IMC
+                                    </button>
+                                </div>
+                            </form>
+
+                           
+                            <div id="resultado" 
+                                 class="mt-4" 
+                                 style="display: none;"
+                                 role="region"
+                                 aria-live="polite"
+                                 aria-atomic="true">
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card mt-4 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="h5 mb-3">
+                                <i class="bi bi-book me-2 text-warning" aria-hidden="true"></i>
+                                Entendendo o IMC Infantil
+                            </h3>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-check-circle-fill text-success me-2" aria-hidden="true"></i>
+                                        <small>O IMC infantil considera percentis de crescimento</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-check-circle-fill text-success me-2" aria-hidden="true"></i>
+                                        <small>Consulte sempre um pediatra para avaliação completa</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="mt-5 py-4 bg-light">
+        <div class="container text-center">
+            <p class="mb-0 text-muted small">
+                <i class="bi bi-info-circle me-1" aria-hidden="true"></i>
+                Esta calculadora é apenas informativa. Consulte um profissional de saúde.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="../js/calculadora.js"></script>
+    <script src="../js/form-crianca.js"></script>
+</body>
+</html>
