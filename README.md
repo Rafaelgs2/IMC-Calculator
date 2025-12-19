@@ -338,8 +338,8 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ## 👤 Autor
 
 **Rafael Silva**
-- GitHub: [@seu-github](https://github.com/Rafaelgs2)
-- LinkedIn: [/in/seu-linkedin](https://www.linkedin.com/in/rafaelgsilva2)
+- GitHub: [Rafaelgs2](https://github.com/Rafaelgs2)
+- LinkedIn: [rafaelgsilva2](https://www.linkedin.com/in/rafaelgsilva2)
 - Email: rafagsilva1312@gmail.com
 
 ---
